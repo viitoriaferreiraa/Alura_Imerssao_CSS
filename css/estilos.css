@@ -1,12 +1,43 @@
+/* soft reset do css */  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body{
-    background-image: url('https://res.cloudinary.com/promoworks/image/upload/v1536734610/think-plan-execute.gif');
-    background-size: auto 150vh;
+    background-image: url('https://i.pinimg.com/originals/28/51/1c/28511cecbb8a1ddae8363b6cbb6743c1.jpg');
+    background-size: auto 100vh;
     font-family: Arial; 
     height: 150vh;
-    
+    font-size: 12px; 
   }
+
+/* se a tela tiver pelo menos 400px vai carregar esses estilos*/
+  @media (min-width: 400px) {
+ body {
+  font-size: 14px;
+}
+  }
+/* breakpoint */ 
+  @media (min-width: 800px) {
+    body {
+     font-size: 18px;
+   }
+     }
+
+header {
+  height: 100vh;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
   .menu {
-    background-color: White; 
+    background-color: transparent;  
+    position: fixed;
+    width: 100vw;
+    top: 0;
   }
   
   .menu ul { 
@@ -18,8 +49,14 @@ body{
     list-style: none;
   }
   
+  .menu a {
+    display: block;
+    padding: 10px 20px;
+
+  }
+  
   a {
-    color: orange; 
+    color: white; 
     text-decoration: none; 
   } 
   
@@ -32,7 +69,20 @@ body{
     text-align: center; 
     color: Whitesmoke; 
   }
+
+  .site-title {
+    font-size: 4em; 
+  }
+
+  .site-subtitle {
+    font-size: 2em;
+  }
   
   .site-subtitle {
     font-style: italic; 
+  }
+
+  .img-portifolio {
+height: 180px; 
+width: 180px; 
   }
