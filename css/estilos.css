@@ -47,6 +47,7 @@ header {
     position: fixed;
     width: 100vw;
     top: 0;
+    z-index: 1;
   }
   
   .menu ul { 
@@ -58,12 +59,18 @@ header {
     list-style: none;
   }
   
+  .menu a:active,
   .menu a {
     display: block;
     padding: 10px 20px;
-
+    transition: background-color 2s, color 1s; 
   }
   
+.menu a:hover {
+  background-color: rgb(20, 20, 22);
+  color: whitesmoke; 
+}
+
   a {
     color: whitesmoke; 
     text-decoration: none; 
@@ -73,7 +80,26 @@ header {
   a:hover {
     text-decoration: underline;
   }
-  
+
+  .titulo {
+    transform: scale(0.2) translateY(50vh);
+   opacity: 0;
+
+   animation: linear 2s animacaotitulo forwards;
+  }
+
+  @keyframes animacaotitulo {
+    0% {
+      transform: scale(0.2) translateY(50vh);
+      opacity: 0;
+    }  
+    
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+  }
+
   .site-subtitle,
   .site-title {
     text-align: center; 
@@ -90,17 +116,19 @@ header {
     font-family: 'Open Sans Condensed', sans-serif;
   }
 
+.contato, 
+.portfolio {
+  padding: 2em; 
+  min-height: 100vh;
+}
+
+.contato h2, 
 .portfolio h2 {
   font-family: 'Open Sans Condensed', sans-serif;
   color: whitesmoke;
   margin-bottom: 0.5em;
   font-size: 2.5em;
   padding: 0.7em;
-}
-
-.portfolio {
-  padding: 2em; 
-  height: 100vh;
 }
 
 .portfolio .grid {
@@ -131,4 +159,25 @@ header {
     width: 200px; 
     object-fit: cover;
     border-radius: 50px;
+    transition: transform 500ms;
+  }
+
+.img-portfolio:hover {
+  transform: scale(1.2) ;
+}
+
+  .contato .icons {
+    text-align: center;
+  }
+
+  .contato a {
+    color: whitesmoke;
+    font-size: 4em; 
+    transition: text-shadow 0.7s;
+  }
+ 
+  .contato a:active,
+  .contato a:hover {
+    text-decoration: none;
+    text-shadow: 0px 0px 10px rgba(194, 194, 138, 1);
   }
