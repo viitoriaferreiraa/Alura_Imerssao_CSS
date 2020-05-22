@@ -3,28 +3,37 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-style: italic;
 }
 
 body{
-    background-image: url('https://i.pinimg.com/originals/28/51/1c/28511cecbb8a1ddae8363b6cbb6743c1.jpg');
+    background-image: url('https://static.tumblr.com/ce43b2ff4046dbd6478fcf2486c9338d/visksv2/ETimh6m6s/tumblr_static_dente_de_le__o_preto.png');
     background-size: auto 100vh;
-    font-family: Arial; 
-    height: 150vh;
+    font-family:'Open Sans Condensed', sans-serif; 
+    height: 100vh;
     font-size: 12px; 
   }
 
 /* se a tela tiver pelo menos 400px vai carregar esses estilos*/
-  @media (min-width: 400px) {
- body {
-  font-size: 14px;
-}
+@media (min-width: 400px) {
+  body {
+   font-size: 14px;
   }
+}
+
 /* breakpoint */ 
-  @media (min-width: 800px) {
-    body {
+@media (min-width: 800px) {
+  body {
      font-size: 18px;
    }
-     }
+}
+
+/* breakpoint */
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+}
 
 header {
   height: 100vh;
@@ -56,8 +65,9 @@ header {
   }
   
   a {
-    color: white; 
+    color: whitesmoke; 
     text-decoration: none; 
+    font-size: 1.2em; 
   } 
   
   a:hover {
@@ -72,17 +82,53 @@ header {
 
   .site-title {
     font-size: 4em; 
+    font-family: 'Bad Script', cursive;
   }
 
   .site-subtitle {
     font-size: 2em;
-  }
-  
-  .site-subtitle {
-    font-style: italic; 
+    font-family: 'Open Sans Condensed', sans-serif;
   }
 
-  .img-portifolio {
-height: 180px; 
-width: 180px; 
+.portfolio h2 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: whitesmoke;
+  margin-bottom: 0.5em;
+  font-size: 2.5em;
+  padding: 0.7em;
+}
+
+.portfolio {
+  padding: 2em; 
+  height: 100vh;
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 1.5em;  
+}
+
+@media (min-width: 560px) {
+  .portfolio .grid {  
+    grid-template-columns: 300px 300px; 
+}
+
+@media (min-width: 1085px) {
+  .portfolio .grid {
+     grid-template-columns: repeat(2,350px);
+     align-content: center;
+     justify-content: center;
+     height: 50vh; 
+  }
+}
+
+.portfolio figure {
+ text-align: center;
+}
+
+  .img-portfolio {
+    height: 180px; 
+    width: 200px; 
+    object-fit: cover;
+    border-radius: 50px;
   }
